@@ -21,7 +21,6 @@ class CustomMobileListViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func MappingData(mobiles: Mobile.Mobile.ViewModel.DisplayMobileModel) {
@@ -39,14 +38,12 @@ class CustomMobileListViewCell: UITableViewCell {
   
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     @IBAction func onFavouriteItemClick(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
       if let indexPath = delegate?.mTable.indexPath(for: self) {
         delegate?.setFavourite(index: indexPath)
-      }
     }
+  }
 }

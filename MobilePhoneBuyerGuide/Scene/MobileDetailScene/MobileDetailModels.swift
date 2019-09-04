@@ -9,12 +9,12 @@
 import UIKit
 
 struct MobileDetail {
-  /// This structure represents a use case
+  
   struct ShowDetail {
     struct Request {
        var itemList: MobileEntity?
     }
-    /// Data struct sent to Presenter
+   
     struct Response {
       let model: [ImageEntity]
       let rating:Double
@@ -23,7 +23,7 @@ struct MobileDetail {
       let description:String
       
     }
-    /// Data struct sent to ViewController
+   
     struct ViewModel {
       let model: [ImageEntity]
       let rating:String

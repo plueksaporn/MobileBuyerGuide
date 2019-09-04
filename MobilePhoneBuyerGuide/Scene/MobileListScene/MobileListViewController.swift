@@ -24,14 +24,12 @@ class MobileListViewController: UIViewController, MobileListViewControllerInterf
     @IBOutlet weak var favBtn: UIButton!
     @IBOutlet weak var allBtn: UIButton!
     @IBOutlet weak var mTable: UITableView!
-  // MARK: - Object lifecycle
 
   override func awakeFromNib() {
     super.awakeFromNib()
     configure(viewController: self)
   }
 
-  // MARK: - Configuration
   private func configure(viewController: MobileListViewController) {
     let router = MobileListRouter()
     router.viewController = viewController

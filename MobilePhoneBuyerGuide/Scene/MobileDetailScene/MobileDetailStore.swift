@@ -8,15 +8,6 @@
 
 import Foundation
 import Alamofire
-/*
-
- The MobileDetailStore class implements the MobileDetailStoreProtocol.
-
- The source for the data could be a database, cache, or a web service.
-
- You may remove these comments from the file.
-
- */
 
 class MobileDetailStore: MobileDetailStoreProtocol {
   func getData(mobileItem: MobileEntity, _ completion: @escaping (Swift.Result<[ImageEntity], Error>) -> Void) {
@@ -34,12 +25,7 @@ class MobileDetailStore: MobileDetailStoreProtocol {
           }
         case .failure(let error):
           completion(.failure(error))
-        }
+      }
     }
-    
   }
-  
-
-  
-  
 }

@@ -26,7 +26,6 @@ class MobileListInteractor: MobileListInteractorInterface {
   var favouriteList: [MobileEntity] = []
   var mobileList: [MobileEntity] = []
   var item: MobileEntity?
-  // MARK: - Business logic
 
   func getMobileData(request: Mobile.Mobile.Request) {
     worker?.getMobileList { [weak self] in

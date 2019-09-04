@@ -9,16 +9,16 @@
 import UIKit
 
 struct Mobile {
-  /// This structure represents a use case
+
   struct Mobile {
-    /// Data struct sent to Interactor
+
     struct Request {
     }
-    /// Data struct sent to Presenter
+
     struct Response {
         let model: [MobileEntity]
     }
-    /// Data struct sent to ViewController
+    
     struct ViewModel {
         var displayMobileModels: [DisplayMobileModel]
         
@@ -38,11 +38,11 @@ struct Mobile {
     struct Request {
       let indexPathCell: IndexPath
     }
-    /// Data struct sent to Presenter
+
     struct Response {
       let model: [MobileEntity]
     }
-    /// Data struct sent to ViewController
+    
     struct ViewModel {
       
     }

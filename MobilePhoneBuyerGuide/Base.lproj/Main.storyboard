@@ -88,7 +88,7 @@
                                     <constraint firstItem="WGs-Tc-gN8" firstAttribute="leading" secondItem="ni8-ZJ-7KR" secondAttribute="trailing" constant="8" id="ymY-Ei-382"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="H2M-41-4PO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2M-41-4PO">
                                 <rect key="frame" x="0.0" y="514" width="414" height="340"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="340" id="Gna-vd-2OH"/>

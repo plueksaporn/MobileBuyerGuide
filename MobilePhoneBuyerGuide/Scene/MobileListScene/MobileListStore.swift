@@ -27,10 +27,8 @@ class MobileListStore: MobileListStoreProtocol {
         case .failure(let error):
           completion(.failure(error))
         }
-    }
-    // Simulates an asynchronous background thread that calls back on the main thread after 2 seconds
+      }
     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-      //      completion(Result.success(Entity()))
     }
   }
 }
