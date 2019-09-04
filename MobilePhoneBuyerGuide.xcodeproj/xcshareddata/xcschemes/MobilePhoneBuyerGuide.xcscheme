@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E445DDB1231FBCE500350E28"
+               BuildableName = "MobilePhoneBuyerGuideTests.xctest"
+               BlueprintName = "MobilePhoneBuyerGuideTests"
+               ReferencedContainer = "container:MobilePhoneBuyerGuide.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

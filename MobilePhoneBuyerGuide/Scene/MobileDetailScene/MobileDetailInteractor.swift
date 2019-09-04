@@ -26,7 +26,6 @@ class MobileDetailInteractor: MobileDetailInteractorInterface {
     }
     worker?.getImageData(mobileItem: item) { [weak self] in
       if case let Result.success(data) = $0 {
-        // If the result was successful, we keep the data so that we can deliver it to another view controller through the router.
         self?.model = data
         guard let model = self?.model else {
          return

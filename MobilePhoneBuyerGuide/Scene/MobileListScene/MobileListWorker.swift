@@ -21,16 +21,8 @@ class MobileListWorker {
   }
 
   func getMobileList(_ completion: @escaping (Swift.Result<[MobileEntity], Error>) -> Void) {
-   
-   
     store.getData {
-      // The worker may perform some small business logic before returning the result to the Interactor
         completion($0)
     }
   }
-  
-  
-  
-  
-  
 }
