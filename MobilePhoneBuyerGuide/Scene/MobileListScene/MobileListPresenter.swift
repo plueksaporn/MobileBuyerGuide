@@ -10,9 +10,11 @@ import UIKit
 
 protocol MobileListPresenterInterface {
   func presentMobileList(response: Mobile.Mobile.Response)
+  func presentSendMobileItem(response: Mobile.SendItem.Response)
 }
 
 class MobileListPresenter: MobileListPresenterInterface {
+ 
   weak var viewController: MobileListViewControllerInterface!
 
   func presentMobileList(response: Mobile.Mobile.Response) {
@@ -46,4 +48,10 @@ class MobileListPresenter: MobileListPresenterInterface {
     let viewModel = Mobile.Mobile.ViewModel(displayMobileModels: displayMobileList)
     viewController.displayMobileList(viewModel: viewModel)
   }
+  
+  func presentSendMobileItem(response: Mobile.SendItem.Response) {
+    let viewModel = Mobile.SendItem.ViewModel(item: response.item)
+    viewController.sendMobileItem(viewModel: viewModel)
+  }
+  
 }

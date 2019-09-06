@@ -46,7 +46,7 @@ class CustomMobileListViewCell: UITableViewCell {
     @IBAction func onFavouriteItemClick(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
       if let indexPath = delegate?.mTable.indexPath(for: self) {
-        delegate?.setFavourite(index: indexPath)
+        delegate?.displayFavourite(index: indexPath)
       }
     }
 }

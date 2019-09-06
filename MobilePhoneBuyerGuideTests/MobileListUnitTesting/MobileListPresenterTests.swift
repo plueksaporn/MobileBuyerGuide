@@ -33,7 +33,35 @@ class MobileListPresenterTests: XCTestCase {
   }
 
   // MARK: - Test doubles
-
+  class MobileListViewControllerSpy: MobileListViewControllerInterface {
+    func displayFavourite(index: IndexPath) {
+      <#code#>
+    }
+    
+    
+    var displayMobileListCalled = false
+    var setFavouriteCalled = false
+    var sendMobileItemCalled = false
+    var showAllMobileListCalled = false
+    
+    func displayMobileList(viewModel: Mobile.Mobile.ViewModel) {
+      displayMobileListCalled = true
+    }
+    
+    func setFavourite(index: IndexPath) {
+      setFavouriteCalled = true
+    }
+    
+    func sendMobileItem(viewModel: Mobile.SendItem.ViewModel) {
+      sendMobileItemCalled = true
+    }
+    
+    func showAllMobileList(viewModel: Mobile.ButtonStatus.ViewModel) {
+      showAllMobileListCalled = true
+    }
+    
+    
+  }
   // MARK: - Tests
 
   func testSomething() {
