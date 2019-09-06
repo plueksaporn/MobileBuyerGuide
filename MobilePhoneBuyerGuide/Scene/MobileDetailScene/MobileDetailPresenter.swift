@@ -14,14 +14,17 @@ protocol MobileDetailPresenterInterface {
 
 class MobileDetailPresenter: MobileDetailPresenterInterface {
   weak var viewController: MobileDetailViewControllerInterface!
-
+  var viewModel: MobileDetail.ShowDetail.ViewModel?
   func presentMobileDetail(response: MobileDetail.ShowDetail.Response) {
-    let viewModel = MobileDetail.ShowDetail.ViewModel(
+      viewModel = MobileDetail.ShowDetail.ViewModel(
       model: response.model,
       rating: "Rating: \(String(response.rating))",
       price: "Price: $\(String(response.price))",
       name: response.name,
       description: response.description)
+    guard let viewModel = viewModel else {
+      return
+    }
     viewController.displayMobileDetail(viewModel: viewModel)
   }
 }

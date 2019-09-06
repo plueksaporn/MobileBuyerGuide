@@ -23,13 +23,5 @@ class MobileListRouter: MobileListRouterInput {
     MobileDetailViewController.interactor.item = item
     viewController.navigationController?.pushViewController(MobileDetailViewController, animated: true)
   }
-  func passDataToNextScene(segue: UIStoryboardSegue) {
-    if segue.identifier == "ShowSomewhereScene" {
-      passDataToSomewhereScene(segue: segue)
-    }
-  }
-
-  func passDataToSomewhereScene(segue: UIStoryboardSegue) {
-//    let someWhereViewController = segue.destination as? MobileDetailViewController
-  }
+  
 }

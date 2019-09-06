@@ -6,15 +6,15 @@
 //  Copyright (c) 2562 SCB. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 struct Mobile {
 
   struct Mobile {
 
     struct Request {
+      
     }
-
     struct Response {
         let model: [MobileEntity]
     }
@@ -34,7 +34,7 @@ struct Mobile {
     }
   }
   
-  struct SetFavorite {
+  struct FaouriteStatus {
     struct Request {
       let indexPathCell: IndexPath
     }
@@ -42,7 +42,6 @@ struct Mobile {
     struct Response {
       let model: [MobileEntity]
     }
-    
     struct ViewModel {
       
     }
@@ -50,16 +49,23 @@ struct Mobile {
   
   struct ButtonStatus {
     struct Request {
-      var favouriteBtn: UIButton
-      var allBtn: UIButton
-      let repeateBtn: Bool
+      var favouriteBtnIsSelected: Bool
+      var allBtnIsSelected: Bool
+      let deleteStatus: Bool
     }
     
     struct Response {
       let model: [MobileEntity]
+      var favouriteBtnIsSelected: Bool
+      var allBtnIsSelected: Bool
+      let repeateBtn: Bool
     }
     
     struct ViewModel {
+      let model: [MobileEntity]
+      var favouriteBtnIsSelected: Bool
+      var allBtnIsSelected: Bool
+      let repeateBtn: Bool
     }
   }
   
@@ -77,8 +83,6 @@ struct Mobile {
       let item: MobileEntity
     }
   }
-}
-
 struct Sorting {
   struct Request {
     var type: String
@@ -89,4 +93,15 @@ struct Sorting {
   }
 }
 
-
+}
+extension Mobile.Mobile.ViewModel.DisplayMobileModel: Equatable {
+  static func == (lhs: Mobile.Mobile.ViewModel.DisplayMobileModel, rhs: Mobile.Mobile.ViewModel.DisplayMobileModel) -> Bool {
+    return lhs.name == rhs.name &&
+      lhs.description == rhs.description &&
+      lhs.id == rhs.id &&
+      lhs.favouriteStatus == rhs.favouriteStatus &&
+      lhs.rating == rhs.rating &&
+      lhs.price == rhs.price &&
+      lhs.thumbImageURL == rhs.thumbImageURL
+  }
+}
